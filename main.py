@@ -40,7 +40,14 @@ def get_status() :
     pattern = re.compile('<a\s*href=[\'|"][\s\S]+[\'|"]\s*class=[\'|"]User_Name[\'|"]\s*>\s*<b>\s*(.+)</b>\s*</a>')
     username = re.search(pattern, data)
     if username:
-        print('-> 当前用户：*' + username.group(1)[1:len(username.group(1)) - 1]  + '*')
+        if PRIVACY == '2':
+            print('-> 当前用户：[保护]')
+        elif PRIVACY == '3':
+            print('-> 当前用户：' + username.group(1))
+        else:
+            if PRIVACY != '1':
+                print('!! 错误的隐私登录设置')
+            print('-> 当前用户：*' + username.group(1)[1:len(username.group(1)) - 1]  + '*')
     else:
         print('-> 登录身份过期或程序失效')
         exit(2)
@@ -67,7 +74,7 @@ def main() :
     print("=================================================")
     print("||                 HaiDan Sign                 ||")
     print("||                Author: Jokin                ||")
-    print("||               Version: v0.0.2               ||")
+    print("||               Version: v0.0.3               ||")
     print("=================================================")
 
     global BASEURL
@@ -79,9 +86,11 @@ def main() :
     global HTTP
     HTTP = urllib3.PoolManager()
 
+    global PRIVACY
     _uid = os.getenv('HAIDAN_UID') if os.getenv('HAIDAN_UID') else False
     _pass = os.getenv('HAIDAN_PASS') if os.getenv('HAIDAN_PASS') else False
     _login = os.getenv('HAIDAN_LOGIN') if os.getenv('HAIDAN_LOGIN') else 'bm9wZQ%3D%3D'
+    PRIVACY =  os.getenv('HAIDAN_PRIVACY') if os.getenv('HAIDAN_PRIVACY') else '1'
 
     if not _uid or not _pass or not _login:
         print('!! 缺少设置： 环境变量/Secrets')

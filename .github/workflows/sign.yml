@@ -30,5 +30,6 @@ jobs:
         HAIDAN_UID: ${{ secrets.HAIDAN_UID }}
         HAIDAN_PASS: ${{ secrets.HAIDAN_PASS }}
         HAIDAN_LOGIN: ${{ secrets.HAIDAN_LOGIN }}
+        HAIDAN_PRIVACY: ${{ secrets.HAIDAN_PRIVACY }}
       run: |
         python main.py
