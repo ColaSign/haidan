@@ -40,7 +40,7 @@ def get_status() :
     pattern = re.compile('<a\s*href=[\'|"][\s\S]+[\'|"]\s*class=[\'|"]User_Name[\'|"]\s*>\s*<b>\s*(.+)</b>\s*</a>')
     username = re.search(pattern, data)
     if username:
-        print('-> 当前用户：' + username.group(1))
+        print('-> 当前用户：*' + username.group(1)[1:len(username.group(1)) - 1]  + '*')
     else:
         print('-> 登录身份过期或程序失效')
         exit(2)
@@ -67,7 +67,7 @@ def main() :
     print("=================================================")
     print("||                 HaiDan Sign                 ||")
     print("||                Author: Jokin                ||")
-    print("||               Version: v0.0.1               ||")
+    print("||               Version: v0.0.2               ||")
     print("=================================================")
 
     global BASEURL
