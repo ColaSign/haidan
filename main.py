@@ -37,7 +37,7 @@ def get_status() :
     data = r.data.decode('utf-8')
 
     # 用户名
-    pattern = re.compile('<a\s*href=[\'|"][\s\S]+[\'|"]\s*class=[\'|"]User_Name[\'|"]\s*>\s*<b>\s*(.+)</b>\s*</a>')
+    pattern = re.compile('<a\s*href=[\'|"]userdetails\.php\?id=\d+[\'|"]\s*class=[\'|"].+[\'|"]\s*>\s*<b>\s*(.+)</b>\s*</a>')
     username = re.search(pattern, data)
     if username:
         if PRIVACY == '2':
@@ -74,7 +74,7 @@ def main() :
     print("=================================================")
     print("||                 HaiDan Sign                 ||")
     print("||                Author: Jokin                ||")
-    print("||               Version: v0.0.3               ||")
+    print("||               Version: v0.0.4               ||")
     print("=================================================")
 
     global BASEURL
