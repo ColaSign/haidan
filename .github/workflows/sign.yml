@@ -9,7 +9,8 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: 0 2,8 * * *
+    # UTC 时间 PRC每天凌晨2点、上午10点和晚上4点执行一次
+    - cron: 0 18,2,8 * * *
 
 jobs:
   build:
