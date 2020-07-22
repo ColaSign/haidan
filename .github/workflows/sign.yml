@@ -5,9 +5,9 @@ name: HaiDan Sign
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, dev ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, dev ]
   schedule:
     # UTC 时间 PRC每天凌晨2点、上午10点和晚上4点执行一次
     - cron: 0 18,2,8 * * *
@@ -31,6 +31,7 @@ jobs:
         HAIDAN_UID: ${{ secrets.HAIDAN_UID }}
         HAIDAN_PASS: ${{ secrets.HAIDAN_PASS }}
         HAIDAN_LOGIN: ${{ secrets.HAIDAN_LOGIN }}
+        HAIDAN_MULTI: ${{ secrets.HAIDAN_MULTI }}
         HAIDAN_PRIVACY: ${{ secrets.HAIDAN_PRIVACY }}
       run: |
         python main.py
