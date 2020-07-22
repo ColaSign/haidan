@@ -133,8 +133,10 @@ def main() :
         get_status()
 
     print('-> 已经完成本次任务')
-    if (ERROR != 0) :
+    if (ERROR != 0):
         print('!! 本次任务出现错误，请及时查看日志')
+    else:
+        print('-> 任务圆满完成')
     exit(ERROR)
 
 if __name__ == '__main__':
