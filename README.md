@@ -29,13 +29,13 @@
 
 ## Secrets 说明
 
-|Key|Value|默认值|可选|说明|
+|Key|Value|默认值|必须|说明|
 |:-:|:-:|:-:|:-:|:-|
-|`HAIDAN_UID`|`c_secure_uid`|无默认值|×|无|
-|`HAIDAN_PASS`|`c_secure_pass`|无默认值|×|无|
-|`HAIDAN_LOGIN`|`c_secure_login`|无默认值|√|无|
-|`HAIDAN_MULTI`|`c_secure_login`|无默认值|√|多账户支持，详见下方`多账户支持`|
-|`HAIDAN_PRIVACY`|`隐私等级`|1|√|`1`：隐藏用户名首尾 `2`：隐藏用户名 `3`：显示用户名|
+|`HAIDAN_UID`|`c_secure_uid`|无默认值|√|无|
+|`HAIDAN_PASS`|`c_secure_pass`|无默认值|√|无|
+|`HAIDAN_LOGIN`|`c_secure_login`|无默认值|×|无|
+|`HAIDAN_MULTI`|*多任务设置*|无默认值|×|多账户支持，详见下方`多账户支持`|
+|`HAIDAN_PRIVACY`|`隐私等级`|1|×|`1`：隐藏用户名首尾 `2`：隐藏用户名 `3`：显示用户名|
 
 
 ## 多账户支持
