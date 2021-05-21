@@ -7,6 +7,10 @@
 
 当前版本：![GitHub tag](https://img.shields.io/badge/tag-v0.0.5-orange)
 
+## 更新预告
+
+由于GitHub官方不鼓励使用Action服务进行签到，本项目将在下一个版本中取消对Action服务的支持并增加Gitlab CICD的支持。同时，请相关Fork仓库注意，继续使用Action服务进行签到可能造成账户限制。
+
 ## 使用说明
 
 - UTC 18,2,8 会进行一次签到，换算成国内时间每天凌晨2点、上午10点和晚上4点执行一次
