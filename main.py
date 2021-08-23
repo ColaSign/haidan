@@ -76,7 +76,7 @@ def main() :
     print("=================================================")
     print("||                 HaiDan Sign                 ||")
     print("||                Author: Jokin                ||")
-    print("||               Version: v0.0.5               ||")
+    print("||               Version: v0.0.6               ||")
     print("=================================================")
 
     global HEADERS
@@ -100,6 +100,8 @@ def main() :
     _uid = os.getenv('HAIDAN_UID') if os.getenv('HAIDAN_UID') else False
     _pass = os.getenv('HAIDAN_PASS') if os.getenv('HAIDAN_PASS') else False
     _login = os.getenv('HAIDAN_LOGIN') if os.getenv('HAIDAN_LOGIN') else 'bm9wZQ%3D%3D'
+    _ssl = os.getenv('HAIDAN_SSL') if os.getenv('HAIDAN_SSL') else 'eWVhaA%3D%3D'
+    _tracker_ssl = os.getenv('HAIDAN_TRACKER_SSL') if os.getenv('HAIDAN_TRACKER_SSL') else 'eWVhaA%3D%3D'
     _multi =  os.getenv('HAIDAN_MULTI') if os.getenv('HAIDAN_MULTI') else False
 
     if _multi == False:
@@ -126,8 +128,8 @@ def main() :
         # 初始化
         MAGIC_NUM = 0
         HEADERS = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
-        'cookie': 'c_secure_login=' + _login + '; c_secure_uid=' + _uid + '; c_secure_pass=' + _pass,
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
+            'cookie': 'c_secure_login=' + _login + '; c_secure_uid=' + _uid + '; c_secure_pass=' + _pass + '; c_secure_tracker_ssl=' + _tracker_ssl + '; c_secure_ssl=' + _ssl,
         }
 
         get_status()
