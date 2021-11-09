@@ -7,16 +7,14 @@
 
 当前版本：![GitHub tag](https://img.shields.io/badge/tag-v0.0.6-orange)
 
-## 更新预告
+## 更新说明
 
-由于GitHub官方不鼓励使用Action服务进行签到，本项目将在下一个版本中取消对Action服务的支持并增加Gitlab CICD的支持。同时，请相关Fork仓库注意，继续使用Action服务进行签到可能造成账户限制。
+默认关闭GitHub自动定时签到功能，加入GitLab签到功能，GitLab需要自行设定签到任务。
 
 ## 使用说明
 
-- UTC 18,2,8 会进行一次签到，换算成国内时间每天凌晨2点、上午10点和晚上4点执行一次
-- 激活`Action`
-- 需要填写下方`使用方法`中的`Secrets`
-- **Action签到需要保持仓库活跃，或者每个月在Action中激活任务**
+- 【已取消】UTC 18,2,8 会进行一次签到，换算成国内时间每天凌晨2点、上午10点和晚上4点执行一次
+- 需要填写下方`使用方法`中的`Secrets`（GitLab在`Settings`→`CI/CD`→`Variables`中设置环境变量）
 
 ## 使用方法
 
