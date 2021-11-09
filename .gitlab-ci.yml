@@ -1,4 +1,5 @@
-image: ubuntu:20.04
+# image: ubuntu:20.04
+image: jokin1999/haidan-sign:v1
 
 stages:
   - sign
@@ -6,8 +7,7 @@ stages:
 sign:
   stage: sign
   script:
-    - sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-    - apt update && apt install -y python3 python3-pip
-    - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - echo "$HAIDAN_MULTI"
+    # - sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+    # - apt update && apt install -y python3 python3-pip
+    # - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - python3 main.py
