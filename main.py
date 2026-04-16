@@ -86,10 +86,10 @@ def main() :
     ERROR = 0
 
     global BASEURL
-    BASEURL = 'https://www.haidan.video/index.php'
+    BASEURL = 'https://www.haidan.cc/index.php'
 
     global SIGNURL
-    SIGNURL = 'https://www.haidan.video/signin.php'
+    SIGNURL = 'https://www.haidan.cc/signin.php'
 
     global HTTP
     HTTP = urllib3.PoolManager()
