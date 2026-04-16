@@ -5,8 +5,6 @@
 
 最新版本：![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/ColaSign/haidan?style=flat-square)
 
-当前版本：![GitHub tag](https://img.shields.io/badge/tag-v0.0.6-orange)
-
 ## 更新说明
 
 默认关闭GitHub自动定时签到功能，加入GitLab签到功能，GitLab需要自行设定签到任务。
