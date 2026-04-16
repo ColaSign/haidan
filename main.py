@@ -76,7 +76,7 @@ def main() :
     print("=================================================")
     print("||                 HaiDan Sign                 ||")
     print("||                Author: Jokin                ||")
-    print("||               Version: v0.0.6               ||")
+    print("||               Version: v0.0.7               ||")
     print("=================================================")
 
     global HEADERS
